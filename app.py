@@ -345,10 +345,6 @@ st.write(
     "or real using trained CLIP-based classifiers."
 )
 
-st.info(
-    "Research prototype: predictions are estimates, not proof "
-    "of authenticity. Confidence is not a guarantee of correctness."
-)
 
 try:
     (
@@ -361,7 +357,6 @@ try:
         config
     ) = load_models()
 
-    st.caption("Models loaded successfully.")
 
 except Exception as error:
     st.error("Model loading failed.")
