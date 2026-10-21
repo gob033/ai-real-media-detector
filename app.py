@@ -372,7 +372,7 @@ except Exception as error:
 photo_tab, video_tab, about_tab = st.tabs([
     "🖼️ Photo Detection",
     "🎬 Video Detection",
-    "ℹ️ About"
+   
 ])
 
 
@@ -488,28 +488,4 @@ with video_tab:
                     st.error(f"Video analysis failed: {error}")
 
 
-# ==========================================
-# ABOUT TAB
-# ==========================================
-with about_tab:
-    st.subheader("About this project")
 
-    st.write(
-        "This research application uses CLIP ViT-B/32 embeddings "
-        "and trained classifiers for AI-generated versus real media."
-    )
-
-    st.write("Photo model: CLIP ViT-B/32 + classifier")
-    st.write("Video model: CLIP ViT-B/32 + temporal pooling")
-    st.write(
-        f"Video frames sampled per prediction: "
-        f"{config['video_frames']}"
-    )
-
-    st.warning(
-        "Performance may differ on unseen generators, edited media, "
-        "compression artifacts, or media outside the training dataset."
-    )
-
-st.divider()
-st.caption("AI vs Real Media Detection • Research prototype")
