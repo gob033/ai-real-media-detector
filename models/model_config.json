@@ -1,0 +1,14 @@
+{
+  "photo_encoder": "ViT-B-32",
+  "photo_pretrained": "openai",
+  "photo_input_dim": 512,
+  "photo_l2_normalize": false,
+  "video_encoder": "ViT-B-32",
+  "video_pretrained": "openai",
+  "video_frames": 8,
+  "video_input_dim": 1024,
+  "labels": {
+    "0": "AI-generated",
+    "1": "Real"
+  }
+}
