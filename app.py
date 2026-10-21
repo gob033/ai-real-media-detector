@@ -17,11 +17,11 @@ from PIL import Image
 # ==========================================
 # 1. APP SETTINGS
 # ==========================================
-st.set_page_config(
-    page_title="AI or Real Detector",
-    page_icon="🔎",
-    layout="wide"
-)
+
+st.title("🔎 FAKTRION_033 ")
+st.subheader("AI vs Real Photo & Video Detection")
+st.caption("AI-Generated Media Detection System")
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "models")
