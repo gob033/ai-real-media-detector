@@ -338,7 +338,7 @@ def show_result(result):
 # ==========================================
 # 8. STREAMLIT USER INTERFACE
 # ==========================================
-st.title("🔎 AI or Real Detector")
+
 
 st.write(
     "Upload a photo or video to classify it as AI-generated "
