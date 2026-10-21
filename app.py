@@ -369,10 +369,10 @@ except Exception as error:
     st.stop()
 
 
-photo_tab, video_tab, about_tab = st.tabs([
+
+photo_tab, video_tab = st.tabs([
     "🖼️ Photo Detection",
     "🎬 Video Detection"
-   
 ])
 
 
