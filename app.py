@@ -371,7 +371,7 @@ except Exception as error:
 
 photo_tab, video_tab, about_tab = st.tabs([
     "🖼️ Photo Detection",
-    "🎬 Video Detection",
+    "🎬 Video Detection"
    
 ])
 
