@@ -14,18 +14,11 @@ import torch.nn as nn
 
 from PIL import Image
 
-# ==========================================
-# 1. APP SETTINGS
-# ==========================================
-
 
 # ==========================================
-# FAKTRION_033 BRANDING
+# FAKTRION_033 BRANDING WITH CUSTOM LOGO
 # ==========================================
-import os
-import streamlit as st
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 LOGO_PATH = os.path.join(
     BASE_DIR, "assets", "faktrion_logo.png"
 )
@@ -37,9 +30,9 @@ logo_col, title_col = st.columns(
 
 with logo_col:
     if os.path.isfile(LOGO_PATH):
-        st.image(LOGO_PATH, width=115)
+        st.image(LOGO_PATH, width=125)
     else:
-        st.warning("Logo image not found.")
+        st.warning("Logo missing: assets/faktrion_logo.png")
 
 with title_col:
     st.markdown(
@@ -49,6 +42,7 @@ with title_col:
             font-weight: 800;
             margin: 0;
             padding: 0;
+            color: #172033;
         ">FAKTRION_033</h1>
         """,
         unsafe_allow_html=True
@@ -61,7 +55,6 @@ st.info(
     "Research prototype: predictions are estimates, "
     "not proof of authenticity."
 )
-
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
