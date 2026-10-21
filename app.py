@@ -18,9 +18,50 @@ from PIL import Image
 # 1. APP SETTINGS
 # ==========================================
 
-st.title("🔎 FAKTRION_033 ")
+
+# ==========================================
+# FAKTRION_033 BRANDING
+# ==========================================
+import os
+import streamlit as st
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+LOGO_PATH = os.path.join(
+    BASE_DIR, "assets", "faktrion_logo.png"
+)
+
+logo_col, title_col = st.columns(
+    [1, 4],
+    vertical_alignment="center"
+)
+
+with logo_col:
+    if os.path.isfile(LOGO_PATH):
+        st.image(LOGO_PATH, width=115)
+    else:
+        st.warning("Logo image not found.")
+
+with title_col:
+    st.markdown(
+        """
+        <h1 style="
+            font-size: 42px;
+            font-weight: 800;
+            margin: 0;
+            padding: 0;
+        ">FAKTRION_033</h1>
+        """,
+        unsafe_allow_html=True
+    )
+
 st.subheader("AI vs Real Photo & Video Detection")
 st.caption("AI-Generated Media Detection System")
+
+st.info(
+    "Research prototype: predictions are estimates, "
+    "not proof of authenticity."
+)
+
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
